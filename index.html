@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheatsheets — ქართულად</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f1117;
+    color: #e2e8f0;
+    padding: 3rem 2rem;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #f8fafc;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.5px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #1e2130;
+    border-radius: 12px;
+    border: 1px solid #2d3148;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    border-color: #4f5fa8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+
+  .card-header {
+    padding: 1rem 1.25rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid #2d3148;
+  }
+
+  .card-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #f1f5f9;
+  }
+
+  .card-badge {
+    margin-left: auto;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    opacity: 0.75;
+  }
+
+  .badge-html  { color: #f97316; }
+  .badge-md    { color: #60a5fa; }
+
+  .card-body {
+    padding: 0.9rem 1.25rem 1.1rem;
+    flex: 1;
+  }
+
+  .card-desc {
+    color: #94a3b8;
+    font-size: 0.84rem;
+    line-height: 1.6;
+  }
+
+  .card-tags {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    background: #111827;
+    color: #64748b;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  }
+
+  .section-label {
+    max-width: 1100px;
+    margin: 0 auto 1rem;
+    color: #475569;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .section-label + .grid {
+    margin-bottom: 2.5rem;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: #334155;
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+
+<h1>📚 Cheatsheets — ქართულად</h1>
+<p class="subtitle">HackTheBox &amp; Web Development სახელმძღვანელოები ქართულ ენაზე</p>
+
+<p class="section-label">🔐 უსაფრთხოება / Security</p>
+<div class="grid">
+
+  <a class="card" href="nmap.md">
+    <div class="card-header">
+      <span class="card-icon">🧭</span>
+      <span class="card-title">Nmap</span>
+      <span class="card-badge badge-md">MD</span>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">ქსელის სკანირება — პორტები, სერვისები, ვერსიები, NSE სკრიპტები. HTB recon-ის პირველი ნაბიჯი.</p>
+      <div class="card-tags">
+        <span class="tag">-p-</span>
+        <span class="tag">-sC -sV</span>
+        <span class="tag">--script vuln</span>
+        <span class="tag">-oA</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="card" href="ffuf.md">
+    <div class="card-header">
+      <span class="card-icon">🚀</span>
+      <span class="card-title">FFUF</span>
+      <span class="card-badge badge-md">MD</span>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">Web fuzzing — directory/file enumeration, parameter discovery, virtual host fuzzing.</p>
+      <div class="card-tags">
+        <span class="tag">FUZZ</span>
+        <span class="tag">-e .php,.bak</span>
+        <span class="tag">-fs</span>
+        <span class="tag">vhost</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="card" href="metasploit.md">
+    <div class="card-header">
+      <span class="card-icon">💣</span>
+      <span class="card-title">Metasploit</span>
+      <span class="card-badge badge-md">MD</span>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">Exploitation framework — exploit ძებნა, payload გენერაცია, meterpreter, post-exploitation.</p>
+      <div class="card-tags">
+        <span class="tag">msfconsole</span>
+        <span class="tag">msfvenom</span>
+        <span class="tag">sessions</span>
+        <span class="tag">post/recon</span>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<p class="section-label">🌐 Web Development</p>
+<div class="grid">
+
+  <a class="card" href="git-cheatsheet-geo.html">
+    <div class="card-header">
+      <span class="card-icon">🌿</span>
+      <span class="card-title">Git</span>
+      <span class="card-badge badge-html">HTML</span>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">Git-ის ბრძანებები — init, commit, branch, merge, rebase, remote და სხვა.</p>
+      <div class="card-tags">
+        <span class="tag">commit</span>
+        <span class="tag">branch</span>
+        <span class="tag">merge</span>
+        <span class="tag">rebase</span>
+      </div>
+    </div>
+  </a>
+
+  <a class="card" href="html-cheatsheet-geo.html">
+    <div class="card-header">
+      <span class="card-icon">🏷️</span>
+      <span class="card-title">HTML</span>
+      <span class="card-badge badge-html">HTML</span>
+    </div>
+    <div class="card-body">
+      <p class="card-desc">HTML ტეგები და ელემენტები — სემანტიკა, ფორმები, ცხრილები, მეტა და სხვა.</p>
+      <div class="card-tags">
+        <span class="tag">&lt;semantic&gt;</span>
+        <span class="tag">&lt;form&gt;</span>
+        <span class="tag">&lt;table&gt;</span>
+        <span class="tag">&lt;meta&gt;</span>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<footer>cheatsheets-ka &mdash; ქართულენოვანი სახელმძღვანელოები</footer>
+
+</body>
+</html>
